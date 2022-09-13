@@ -25,6 +25,7 @@ func ExampleIngestionPolicies() {
 	policy := &wavefront.IngestionPolicy{
 		Name:        "test ingestion policy",
 		Description: "an ingestion policy created by the Go SDK test suite",
+		Scope:       "ACCOUNT",
 	}
 
 	err = ingestionPolicies.Create(policy)
