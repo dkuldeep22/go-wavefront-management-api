@@ -74,6 +74,7 @@ func TestIngestionPolicies_CreateUpdateDelete(t *testing.T) {
 
 	ingestionPolicy.Name = "Example"
 	ingestionPolicy.Description = "someDescription"
+	ingestionPolicy.Scope = "ACCOUNT"
 
 	if err := pol.Create(ingestionPolicy); err != nil {
 		t.Fatal(err)

@@ -12,6 +12,7 @@ type IngestionPolicy struct {
 	Description         string `json:"description"`
 	UserAccountCount    int    `json:"userAccountCount"`
 	ServiceAccountCount int    `json:"serviceAccountCount"`
+	Scope               string `json:"scope"`
 }
 
 type IngestionPolicies struct {
