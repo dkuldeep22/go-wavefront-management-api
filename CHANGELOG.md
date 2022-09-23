@@ -1,6 +1,9 @@
 # Changelog
 
 Changelog for go-wavefront-management-api.
+## [1.16.0]
+
+* Add support for Scope field in Ingestion Policy
 
 ## [1.15.0]
 
