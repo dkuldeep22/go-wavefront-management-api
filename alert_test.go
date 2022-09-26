@@ -80,7 +80,6 @@ func TestAlerts_CreateUpdateDeleteAlert(t *testing.T) {
 		Severity:            "WARN",
 		AdditionalInfo:      "please resolve this alert",
 		Tags:                []string{"mytag1", "mytag2"},
-		ProcessRateMinutes:  2,
 	}
 
 	// Update should fail because no ID is set
@@ -130,7 +129,6 @@ func TestMultiThresholdAlerts_CreateUpdateDeleteAlert(t *testing.T) {
 		SeverityList:        []string{"SMOKE", "WARN"},
 		AdditionalInfo:      "please resolve this alert",
 		Tags:                []string{"mytag1", "mytag2"},
-		ProcessRateMinutes:  2,
 	}
 
 	// Update should fail because no ID is set
@@ -139,7 +137,7 @@ func TestMultiThresholdAlerts_CreateUpdateDeleteAlert(t *testing.T) {
 	a.client.(*MockCrudAlertClient).method = "POST"
 	assert.NoError(a.Create(&alert))
 	assert.Equal("1234", *alert.ID)
-	
+
 	a.client.(*MockCrudAlertClient).method = "PUT"
 	assert.NoError(a.Update(&alert))
 
